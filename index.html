@@ -102,11 +102,11 @@
         <li>Intended Audience<br/>
         Note: This could based on any information known about the user, such as age, reading ability, accessibility requirements.</li>
         <li>Category or Subject<br/>
-        Examples: Astronomy, Education, Technology, Sports</li>
+        Examples: Astronomy, Chemistry, Education, History, Technology, Sports</li>
+        <li>Identity of original Annotation of which the current one is a copy</li>
+        <li>Licensing and/or Rights statements</li>
       </ul>
     </p>
-
-
     </section>
 
   </section>
@@ -238,11 +238,17 @@
       </p>
     </section>
     <section>
-      <h2>Determination of Annotation Relevance after Target is Modified</h2>
+      <h2>Determination of Annotation Validity after Target is Modified</h2>
       <p>
         A user annotates a publication with a correction to the text. The publisher then acts upon this annotation to correct the mistake, or in the scholarly field potentially to retract the publication from the scientific record. After the correction has been made, the annotation no longer applies to the publication and hence should not be displayed. It may be important not to delete the annotation, such that the user gets credit in some system for reporting the correction. The system that maintains the annotation may not be connected to the system that publishes the publication, and hence might not be able to be updated.
       </p>
     </section>    
+    <section>
+      <h2>Determination of Annotation Validity for Embedded Resources</h2>
+      <p>
+        A user annotates an embedded resource, such as an image, which is used in several places within a publication.  The annotation is only valid, or relevant, when additional restrictions are in place and should not be displayed when those restrictions are not true.  For example, the same headshot photograph is used for two different people and the user wants to annotate the photograph to say that it is wrong when used on page 1, but not have the annotation displayed when it is used correctly on page 3.  Alternatively, the user might wish to comment that a company logo should only be used in the header on every page, but nowhere else.
+      </p>
+    </section> 
 
   </section>
 
@@ -320,7 +326,6 @@
 <!-- 
   Missing features from Open Annotation:
   * hasScope  // not sorry to see this go
-  * Composite/List // Important
 -->
 
 
@@ -340,6 +345,7 @@
 <li>Annotations without a Body Resource (Bookmark, Highlight)</li>
 
 <li>Metadata about the Annotation's Provenance</li>
+
 <li>Ability to target a point within a Publication</li>
 <li>Ability to target a range of characters within a Publication's text</li>
 <li>Ability to target an Embedded Resource</li>
@@ -348,8 +354,11 @@
 
 <li>Ability to target multiple resources with a single Annotation</li>
 <li>Ability to provide multiple resources as the body of a single Annotation</li>
+<li>Ability to specify that only one of the resources is required or should be rendered</li>
+<li>Ability to specify that all of the resources are required or should be rendered, optionally in a particular order</li>
 
-
+<li>Collection of annotations, where the annotations in the collection are ordered</li>
+<li>Metadata about the Collection of Annotations</li>
 
 </ul>
 </section>
@@ -364,12 +373,8 @@
 <li>Management of Annotations</li>
 
 </ul>
-
-
-
 </section>
-
-
+</section>
 
 
 <section>
@@ -383,6 +388,7 @@
 <li>SKOS</li>
 <li>Media Fragments</li>
 <li>CSS</li>
+<li>Prov</li>
 
 </section>
 
