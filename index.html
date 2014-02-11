@@ -130,6 +130,19 @@
       <p>
       A user wishes to annotate a particular part of an embedded resource, such as a rectangular section of an image or a particular time range of an embedded video file. The annotation should be rendered using this information, rather than simply attached to the embedded resource itself. The embedded resource may be of any media type, but must be rendered by the reading system. Thus video, image, audio and similar are in scope for this use case, but not stylesheets or scripts which are not rendered directly. Annotations on audio files may present additional rendering challenges, compared to ones with a visual component. The user then wishes to share the annotation with others.
       </p>
+      <p>
+      The parts of resources to be annotated include:
+      <ul>
+        <li>Character position in a text or data stream</li>
+        <li>Time position within an audio or video stream</li>
+        <li>x/y points in an area such as an image or video</li>
+        <li>x/y/z points in a volume such as a 3d object</li>
+        <li>Character ranges within a text or data stream</li>
+        <li>Time ranges within an audio or video stream</li>
+        <li>Areas within an image, including rectangular, circular and polygonal areas</li>
+        <li>Volumes within a 3d object</li>
+      </ul>
+      </p>
     </section>
     <section>
       <h2>Annotating Alt Text of Embedded Resources</h2>
@@ -159,68 +172,107 @@
 
     <section>
       <h2>Cross Format Annotations</h2>
+      <p>
+        A user wishes to annotate a digital publication in one format and have the annotation appear for different representations of the same resource. For example, an annotation created on an EPUB should also be rendered on the equivalent PDF or HTML page. The annotation can be either on the publication level, or anchored to a particular part of the text. Annotations on embedded resources (such as images) that are embedded without identity in alternate representations are not considered in scope, for example annotating a part of an image in an HTML page which is then embedded within the PDF representation of the page.
+      </p>
     </section>
     <section>
       <h2>Cross Version Annotations</h2>
+      <p>
+        A user wishes to annotate part of a publication for which she has multiple editions, or that is updated regularly, and have those annotations persist between versions of the same publication. For example, annotating the first line of Hamlet should appear on all of the copies of the play that the user has access to. If the publisher provides a typo-fix, known to happen silently at times, then the annotations should be available on this new version of the publication rather than equally silently disappearing. Thirdly, a teacher annotating a text book should be able to share his annotations with his students even though they do not have the teacher's copy of the text book, but instead have acquired it from different retailers.
+      </p>
     </section>    
     <section>
       <h2>Maintaining Annotation Style</h2>
+      <p>
+      A user wishes to associate a particular style with an annotation, either for the comment or the delineation of the target of the annotation. For example, a user draws a bounding box on an image of the night sky, and wishes to ensure that her client in the future will draw the box in bright green to stand out, and certainly not to draw it in the default black which would be unable to be seen. An academic is highlighting parts of a text in two colors that have meaning to him; red strikethrough is statements that he disagrees with, and green background is for statements that he does agree with. These styles must be maintained for the highlights to be of use in the future. Thirdly, the user should be able to associate style with the comment or body of the annotation, such that the text or resource is rendered in a particular way. Important (to the user) comments might have a bold-face style associated with them, whereas notes may be in italic.
+      </p>
     </section>
     <section>
       <h2>Maintaining Annotation Layout</h2>
+      <p>
+      A user wishes for their annotations to be presented at a particular location on the page, such that the layout of the annotations doesn't interfere with the reading of the publication. For example, annotations could be styled as a particular height and width, and then put into the margins of the page or over top of other white space. Annotations could be visually ordered such that reading them in the presented order gave a better experience than reading them in the order of the targets within the publication. Thirdly, the layout could be used for organization of thoughts concerning the publication by moving all of the related annotations together spatially. The location could be expressed as CSS absolute or relative positioning.
+      </p>
     </section>
     <section>
-      <h2>Recording State of Dynamic Resources</h2>
+      <h2>Recording State of Changing, Online Resources</h2>
+      <p>
+      A user wishes to annotate the publication as it appears with dynamic resources in a particular state, or in terms of the web architecture, given a particular representation. Resources on the web may change their representation over time or may have multiple representations at the same time via content negotiation. The URI of the resource alone is thus not sufficient to determine the representation that was delivered to the annotator, and additional information such as the time of the request and the HTTP headers sent must be recorded. 
+      </p>
     </section> 
     <section>
       <h2>Recording State of User Manipulated Resources</h2>
+      <p>
+      A user wishes to annotate a publication with embedded, dynamic resources. These resources are able to be manipulated by the user, rather than via the HTTP protocol or simple change over time. For example, a publication may embed a 3 dimensional model of a protein structure that can be rotated, panned and zoomed. Some number of manipulations must be performed in order for the target of the annotation to be visible or understandable, regardless of the accuracy of the target region in the model. The consuming user agent should then be able to reproduce these manipulations in order to allow a third party to see the model as annotated.
+      </p>
     </section>
     <section>
       <h2>Annotation has Multiple, Independent Bodies</h2>
+      <p>
+        A user wishes to associate multiple resources at the same time with a single target, where the resources are independent of each other. For example, a user exports their browser bookmarks which contain a short note and several tags. Alternatively, tags may be extracted from the comment's text by an automatic process and added to the annotation.
+      </p>
+
     </section>
     <section>
-      <h2>Annotation has a Choice of Multiple, Independent Bodies</h2>
+      <h2>Annotation has a Choice of Multiple, Dependent Bodies</h2>
+      <p>
+      A user wishes to annotate a publication or part thereof with multiple options for the body. The options are thus dependent on each other, and only one of the options should be displayed to the user. Examples are: translations of comments, where the user agent could display the French translation of a Spanish comment; alternative formats for the same content, such as HTML with a fallback to plain text; and alternative URLs for the same content, where the content is accessible from each of the URLs.
+      </p>
     </section>
     <section>
       <h2>Determination of Annotation Relevance after Target is Modified</h2>
+      <p>
+        A user annotates a publication with a correction to the text. The publisher then acts upon this annotation to correct the mistake, or in the scholarly field potentially to retract the publication from the scientific record. After the correction has been made, the annotation no longer applies to the publication and hence should not be displayed. It may be important not to delete the annotation, such that the user gets credit in some system for reporting the correction. The system that maintains the annotation may not be connected to the system that publishes the publication, and hence might not be able to be updated.
+      </p>
     </section>    
 
-  </section>
-
-  <section>
-    <h2>Annotation Packaging</h2>
-
-
-    <section>
-      <h2>Annotations supplied with Publication</h2>
-    </section>
-    <section>
-      <h2>Third party commentary</h2>
-    </section>
-    
   </section>
 
   <section>
     <h2>Annotation Publication</h2>
 
     <section>
+      <h2>Annotations supplied with Publication</h2>
+      <p>
+      A publisher has one or more sets of annotations about a publication and wishes to supply those annotations along with the publication. These annotations could be comments by the author (in the same vein as DVD extras commentary), from famous readers, or simply pointers to related works. In an education setting, this functionality could be used to provide additional commentaries on a text book or other publication that are intended to assist the student in understanding the material. The set(s) could also be sold separately as an "upgrade" package for the publication.  The order of the annotations may be important, for example to read the publication in chronological rather than narrative order, or by following the order of a class lectures rather than the order of the chapters in the text book.  The metadata about the collection of annotations is also important, such as who packaged them together and for what purpose.
+      </p>
+    </section>
+
+    <section>
+      <h2>Third party commentary</h2>
+      <p>
+      A user or publisher other than the one responsible for the target publication(s) has one or more sets of annotations and wishes to make those available to users. These annotations could be comments by the author, other readers, the publisher, or other sources. 
+      </p>
+
+    </section>
+
+    <section>
       <h2>Persistence of Annotations</h2>
+      <p>
+      A user wishes to save the annotation that they have created in order to retrieve it later, regardless of whether it is finished or not. The Annotation should be given a unique and resolvable identifier. The user may wish to save the annotation in their own system, rather than the system which provides the resource being annotated. The user may equally wish to save the annotation in multiple systems. The annotation should persist in local storage if the user is offline, and be persisted globally once the connection is re-established. In the interim, a locally unique identifier should be assigned to the annotation. Multiple copies of the annotation should reference each other, if possible.
+      </p>
     </section>
     <section>
       <h2>User or System Initiated Transfers between Systems</h2>
+      <p>
+        Either the user or the system requests that all or some subset of annotations that are maintained be transferred to another system. If the user requests it, then it this enables an export functionality such that the user's annotations can be exported to another platform or device. If the system requests it, then this enables a synchronization functionality where the user's annotations will be maintained in multiple locations for ease of use and preservation, or aggregation for analysis. Both such cases should use the same mechanism.
+      </p>
     </section>
     <section>
       <h2>Annotation (or Part) is not Published Openly</h2>
-<p>
-A user wishes to keep their annotations or personal notes private, or only share with a small group of people such as a reading group, academic research group or only with a set of friends in a social network. Even if the user wishes to keep their annotations private, the ability to transfer the annotations between devices is desirable, so that they be used regardless of the particular reading platform.
-</p>
-<p>
-The user may also wish to keep only some aspect of the annotation private, for example the comment should be protected, while the annotation graph can be shared openly, or vice versa. Regular web based authentication and authorization structures should be used to enable this functionality in an online environment to ensure interoperability.
-</p>
+      <p>
+      A user wishes to keep their annotations or personal notes private, or only share with a small group of people such as a reading group, academic research group or only with a set of friends in a social network. Even if the user wishes to keep their annotations private, the ability to transfer the annotations between devices is desirable, so that they be used regardless of the particular reading platform.
+      </p>
+      <p>
+      The user may also wish to keep only some aspect of the annotation private, for example the comment should be protected, while the annotation graph can be shared openly, or vice versa. Regular web based authentication and authorization structures should be used to enable this functionality in an online environment to ensure interoperability.
+      </p>
 
     </section>
     <section>
       <h2>Publication (or Part) is not Published Openly</h2>
+      <p>
+      A user wishes to annotate a resource the she has access to, but requires authentication and/or authorization to view or annotate. The annotation should not circumvent or allow the circumvention of this DRM, for example by reproducing the content of the target publication.
+      </p>
     </section>
 
   </section>
@@ -229,22 +281,41 @@ The user may also wish to keep only some aspect of the annotation private, for e
     <h2>Other Use Cases</h2>
 
     <section>
-      <h2>Specifying Target Audience for Annotation</h2>
+      <h2>Metadata: Specifying Target Audience for Annotation</h2>
+      <p>
+      A publisher wishes to provide either multiple annotations or multiple bodies/comments with each being intended for a particular, defined audience. This would allow appropriate annotations to be presented based on any information known about the user, such as age, reading ability, accessibility requirements and so forth.      
+      </p>
+    </section>
+    <section>
+      <h2>Metadata: Categorization of Annotations</h2>
+      <p>
+      When colors or styles associated with annotations are meaningful to an individual, to a particular group, or generally, a text label should be associated with the annotation group drawn from a list of terms (taxonomy) or free text.
+      </p>
     </section>
     <section>
       <h2>Using Annotation for Contributing Accessibility Information</h2>
+      <p>
+      An annotation provider (personal or retailer) wishes to provide annotations that give additional information about resources for the purposes of accessibility. For example, images can be easily described in an annotation which is read aloud by the user agent.
+      </p>
     </section>
     <section>
       <h2>Discovery of Annotations</h2>
+      <p>
+      Users need to easily become aware of and find highlights or annotations, particularly when using a screen reader, a small screen, or seeking sparse annotations in a lengthy work.
+      </p>
     </section>
-    <section>
-      <h2>Categorization of Annotations</h2>
-    </section>
+
 
 
   </section>
 
 </section>
+
+<!-- 
+  Missing features from Open Annotation:
+  * hasScope  // not sorry to see this go
+  * Composite/List // Important
+-->
 
 
 <section>
@@ -305,6 +376,7 @@ The user may also wish to keep only some aspect of the annotation private, for e
 <li>RDF</li>
 <li>SKOS</li>
 <li>Media Fragments</li>
+<li>CSS</li>
 
 </section>
 
