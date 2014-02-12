@@ -67,46 +67,80 @@
       <p>
       A user wishes to write a comment about a particular publication, such as a single issue of a comic or a single book title. The comment is written in plain text or basic HTML, either on the reading platform (such as a web browser or reading system, henceforth "user agent") or in the retailer's platform. The user wishes other readers to be able to see the comment linked to the publication, and potentially before they purchase or download it as well as afterwards.
       </p>
+      <h3>Examples</h3>
+      <p>
+      <ul>
+        <li>Amy is reading Alice in Wonderland online, and using a tool built into the website, comments that she really loves the way the book is written. She then shares this with her friend, Ben.</li> 
+        <li>Ben is reading a Manga comic on a mobile device.  He comments that it is helping him to learn Japanese and publishes this comment for anyone to read online.</li>
+      </ul>
+
     </section>
     <section>
       <h2>Tagging a Publication</h2>
       <p>
       A user wishes to organize their personal digital library by tagging the publications that they have access to. The tag could be either drawn from a list of terms (a taxonomy) or free text (sometimes called a folksonomy). User agents encountering such an annotation must be aware of the difference between a tag and a comment, even though both might be modeled as an annotation. Tags are typically rendered separately and very differently from short textual comments. The user then wishes to view their library partitioned via the tags. The user may wish to share their tags with other users to help the recipient categorize their own library, or find publications of mutual interest.
       </p>
+      <h3>Examples</h3>
+      <ul>
+        <li>Colleen has a collection of works of various types in her library about chemistry, science fiction and the renaissance. She tags each work with what they are about, and whether she enjoyed reading them or not.</li>
+        <li>David tags an online poem about his home town with the URI for the location from Wikipedia.  He publishes this annotation so that others can find it.</li>
+      </ul>
+
     </section>
     <section>
       <h2>Structured Review of a Publication</h2>
       <p>
       A user wishes to provide a structured review of a particular publication, including pre-defined fields such as a star rating for quality, cost, entertainment or other domain-specific information. The review could also include a full text description, such as the comment in the first use case. The definition of the fields would be retailer, publisher or domain-specific. In the scholarly domain, this could be expected to provide a distributed and standardized peer-review system, rather than the current use of vendor-specific interfaces. In the commercial sector, it could standardize such features as product reviews.
       </p>
+      <h3>Examples</h3>
+      <ul>
+        <li>Emily has read a textbook and provides a review of it online to help her classmates and other students.  She gives it ratings on value for money, ease of use, ease of understanding, and overall quality, plus a long form description of the work.</li>
+        <li>Frank is reviewing a scholarly article for an academic publisher.  The publisher requires various fields to be completed, such as relevance to the journal, novelty of the research, and quality of the experiments described.  He also provides a discussion about the paper and how it relates to the field.</li>
+      </ul> 
+
     </section>    
     <section>
       <h2>Comment Maintained Separately from Annotation</h2>
       <p>
       A user wishes to link an existing web resource, such as a blog post or uploaded video, to the particular publication that it is about. The comment could be any online resource, in any format. The user wishes other readers to be able to see the resource linked to the publication, and potentially before they purchase or download it as well as afterwards.
       </p>
+      <h3>Examples</h3>
+      <ul>
+        <li>Gretchen uses a mobile device to take a video of herself discussing a work that she has just read for a book club.  She posts the video to a commonly used video sharing platform, and then in her reading system annotates the book with the link to the video.  She then shares the annotation with the members of her book club.</li>
+        <li>Harry has written a long blog post about the features of a digitized medieval manuscript.  The manuscript is available via a dedicated website, and he links the blog post to the website's publication via an annotation in his personal note taking system.</li>
+      </ul>
     </section>
     <section>
-    <h2>Annotation Metadata</h2>
-    <p>
-    A user wishes to contribute their experience in the form of a comment, and wishes to remain known as the author of that content and annotation that links it to the publication.  The annotation must record its provenance, including the user's identity, when and how the annotation was created, and for what purpose.
-    </p>
-    <p>
-    Desirable metadata features:
+      <h2>Annotation Metadata</h2>
+      <p>
+      A user wishes to contribute their experience in the form of a comment, and wishes to remain known as the author of that content and annotation that links it to the publication.  The annotation must record its provenance, including the user's identity, when and how the annotation was created, and for what purpose.
+      </p>
+      <p>
+      Desirable metadata features:
+        <ul>
+          <li>Creator's identity and information</li>
+          <li>Creation time</li>
+          <li>Creation tool</li>
+          <li>Purpose of the annotation<br/>
+          Examples: tagging, describing, commenting, identifying, bookmarking, highlighting.</li>
+          <li>Intended Audience<br/>
+          Note: This could based on any information known about the user, such as age, reading ability, accessibility requirements.</li>
+          <li>Category or Subject<br/>
+          Examples: Astronomy, Chemistry, Education, History, Technology, Sports</li>
+          <li>Identity of original Annotation of which the current one is a copy</li>
+          <li>Licensing and/or Rights statements</li>
+        </ul>
+      </p>
+      <p>
+      Note that many of these features are desirable for the body and target resources as well.
+      </p>
+
+      <h3>Examples</h3>
       <ul>
-        <li>Creator's identity and information</li>
-        <li>Creation time</li>
-        <li>Creation tool</li>
-        <li>Purpose of the annotation<br/>
-        Examples: tagging, describing, commenting, identifying, bookmarking, highlighting.</li>
-        <li>Intended Audience<br/>
-        Note: This could based on any information known about the user, such as age, reading ability, accessibility requirements.</li>
-        <li>Category or Subject<br/>
-        Examples: Astronomy, Chemistry, Education, History, Technology, Sports</li>
-        <li>Identity of original Annotation of which the current one is a copy</li>
-        <li>Licensing and/or Rights statements</li>
+        <li>Ingrid annotates a short story that she has read for an online class, and submits the annotation into the coursework system.  The system keeps track of her identity for credit towards the class, when it was created to ensure that her work was submitted on time, the fact that it was created externally rather than within the coursework system, and other attributes.</li>
+        <li>Jeremy discovers a typo in an online encyclopedia entry that is not able to be edited by users directly.  He annotates the entry with the typo and gives the correction.  The system records the provenance of the annotation and adds him into its reputation system, which generates an automatic scoreboard for users and articles.</li>
       </ul>
-    </p>
+
     </section>
 
   </section>
@@ -122,24 +156,48 @@
       <p> 
       The user also wishes to share this position with others to show how far through the publication they have progressed. This might be publically shared for bragging rights, shared semi-publically such as a reading group or class, or shared privately between platforms that the user has access to in order to maintain the position between devices.
       </p>
+      <h3>Examples</h3>
+      <ul>
+        <li>Karen is reading a fantasy book as she commutes to work on the train every day.  When she closes her mobile device, the reading system automatically bookmarks where she was reading so she can resume from that position when she gets the train home in the evening.</li>
+        <li>Luis is studying for an exam and creates bookmarks in his textbooks and required reading documents at home.  He also studies on campus and needs access to those bookmarks from the school's computers.  He does not want other students to see his bookmarks, as he is competitive and wants to be the top of the class.</li>
+      </ul>
+
     </section>
     <section>
       <h2>Highlighting a Span of Text</h2>
       <p>
       A user wishes to highlight a span of text in a publication for emphasis. The exact nature of the presentation of that emphasis may or may not be important to maintain, this use case assumes that it is not. The emphasis might be to mark a passage of particular importance, a typo or other mistake, something to cite in another document, to bring to the attention of other readers, or to mark two such selections for comparison. The user may wish to share the highlight, and certainly wishes it to be accessible on multiple platforms to which she has access.
       </p>
+      <h3>Examples</h3>
+      <ul>
+        <li>Madeleine is preparing to publish a newspaper article and is doing background research.  She highlights various sections of other publications in order to later come back to them and decide if she should include them as quotes in the article or not.</li>
+        <li>Nigel is proofreading his own term paper and highlights areas that he needs to work on.  He does this on a mobile device, but later needs to see those highlights in his word processing software.</li>
+      </ul>
+
     </section>
     <section>
       <h2>Commenting on a Span of Text</h2>
       <p>
       A user wishes to make a comment about a particular span of text. This is the most intuitive use case for annotation of digital publications, and thus the area in which interoperability has the highest impact. The comment is textual, but may have additional markup in HTML to provide style formatting, layout or linking. The Annotation should be sharable, as per the other use cases.
       </p>
+      <h3>Examples</h3>
+      <ul>
+        <li>Olivia works for the government and is researching a particular topic.  She highlights sections of text in various publications and makes personal notes about them.  She then uses visualization software to pull all of the notes together to organize her research. </li>
+        <li>Peter reads a news article online that he knows contains misinformation.  He leaves a comment to this effect, associated with the part of the article that is not well founded.</li>  
+      </ul>
+
     </section>
     <section>
       <h2>Annotating Embedded Resources</h2>
       <p>
         A user wishes to make a comment about a particular resource that is embedded as part of the publication, such as an image or video. In the general case, the user would expect to somehow select the embedded resource and then launch the interface for adding comments in the same way as commenting on text. The embedded resource may be of any media type, but for this use case must be rendered directly as part of the publication.
-      </p>  
+      </p>
+      <h3>Examples</h3>
+      <ul>
+        <li>Qitarah </li>
+        <li>Robert </li>
+      </ul>
+
     </section>
     <section>
       <h2>Annotating Parts of Embedded Resources</h2>
@@ -332,48 +390,49 @@
 <section>
 <h2>Requirements</h2>
 
-<section>
-<h2>Annotation Model</h2>
+  <section>
+  <h2>Annotation Model</h2>
 
-<ul>
-<li>Identity of Annotation</li>
-<li>Identity of Publication (or Target Resource)</li>
-<li>Identity of Comment (or Body Resource)</li>
-<li>Identity of Resources Embedded within the Publication</li>
-<li>Multiple Formats for Comment, including Structured Data</li>
-<li>Distinction between Tag and Comment, or other types of Body Resource</li>
-<li>Annotations without a Body Resource (Bookmark, Highlight)</li>
+  <ul>
+    <li>Identity of Annotation</li>
+    <li>Identity of Publication (or Target Resource)</li>
+    <li>Identity of Comment (or Body Resource)</li>
+    <li>Identity of Resources Embedded within the Publication</li>
+    <li>Multiple Formats for Comment, including Structured Data</li>
+    <li>Distinction between Tag and Comment, or other types of Body Resource</li>
+    <li>Annotations without a Body Resource (Bookmark, Highlight)</li>
+    <li>Metadata about the Annotation's Provenance</li>
 
-<li>Metadata about the Annotation's Provenance</li>
+    <li>Ability to target a point within a Publication</li>
+    <li>Ability to target a range of characters within a Publication's text</li>
+    <li>Ability to target an Embedded Resource</li>
+    <li>Ability to target a segment (point, range, area, volume) of an Embedded Resource</li>
+    <li>Ability to target alternate accessibility representation of an Embedded Resource</li>
 
-<li>Ability to target a point within a Publication</li>
-<li>Ability to target a range of characters within a Publication's text</li>
-<li>Ability to target an Embedded Resource</li>
-<li>Ability to target a segment (point, range, area, volume) of an Embedded Resource</li>
-<li>Ability to target alternate accessibility representation of an Embedded Resource</li>
+    <li>Ability to target multiple resources with a single Annotation</li>
+    <li>Ability to provide multiple resources as the body of a single Annotation</li>
+    <li>Ability to specify that only one of the resources is required or should be rendered</li>
+    <li>Ability to specify that all of the resources are required or should be rendered, perhaps in a particular order</li>
 
-<li>Ability to target multiple resources with a single Annotation</li>
-<li>Ability to provide multiple resources as the body of a single Annotation</li>
-<li>Ability to specify that only one of the resources is required or should be rendered</li>
-<li>Ability to specify that all of the resources are required or should be rendered, optionally in a particular order</li>
+    <li>Ability to associate style information with bodies and targets</li>
+    <li>Ability to associate timestamps with bodies and targets to determine the appropriate representation</li>
+    <li>Ability to associate HTTP request information with bodies and targets to determine the appropriate representation</li>
 
-<li>Collection of annotations, where the annotations in the collection are ordered</li>
-<li>Metadata about the Collection of Annotations</li>
+    <li>Collection of annotations, where the annotations in the collection are ordered</li>
+    <li>Metadata about the Collection of Annotations</li>
+  </ul>
+  </section>
 
-</ul>
-</section>
+  <section>
+  <h2>Services</h2>
 
-<section>
-<h2>Services</h2>
-
-<ul>
-<li>Discovery of Annotations Relevant to Publication</li>
-<li>Service for Sharing Annotations between Users</li>
-<li>Persistence of Annotations</li>
-<li>Management of Annotations</li>
-
-</ul>
-</section>
+  <ul>
+    <li>Discovery of Annotations Relevant to Publication</li>
+    <li>Persistence of Annotations</li>
+    <li>Service for Sharing Annotations</li>
+    <li>Management of Annotations</li>
+  </ul>
+  </section>
 </section>
 
 
