@@ -408,27 +408,15 @@ This use case is particularly challenging to solve in the generic case rather th
     <h2>Annotation Publication</h2>
 
     <section>
-      <h2>Annotations supplied with Publication</h2>
+      <h2>Sets of Annotations for a Publication</h2>
       <p>
-      A publisher has one or more sets of annotations about a publication and wishes to supply those annotations along with the publication. These annotations could be comments by the author (in the same vein as DVD extras commentary), from famous readers, or simply pointers to related works. In an education setting, this functionality could be used to provide additional commentaries on a text book or other publication that are intended to assist the student in understanding the material. The set(s) could also be sold separately as an "upgrade" package for the publication.  The order of the annotations may be important, for example to read the publication in chronological rather than narrative order, or by following the order of a class lectures rather than the order of the chapters in the text book.  The metadata about the collection of annotations is also important, such as who packaged them together and for what purpose.
+      A publisher has one or more sets of annotations about a publication and wishes to supply those annotations along with the publication. Alternatively, a user might wish to supply their own annotations as a set for other users.  These annotations could be comments by the author (in the same vein as DVD extras commentary), from famous readers, or simply pointers to related works. In an education setting, this functionality could be used to provide additional commentaries on a text book or other publication that are intended to assist the student in understanding the material. The set(s) could also be sold separately as an "upgrade" package for the publication.  The order of the annotations may be important, for example to read the publication in chronological rather than narrative order, or by following the order of a class lectures rather than the order of the chapters in the text book.  The metadata about the collection of annotations is also important, such as who packaged them together and for what purpose.
       </p>
       <h3>Examples</h3>
       <ul>
-      <li>Ulrich  </li>
-      <li>Veronica  </li>
+      <li>Ulrich works for a publishing house and has transformed the author's commentary on their steampunk novel into a set of annotations for sale.  The company wishes to have them available as an add-on for customers that have already bought the novel, and also in a bundle for new sales. </li>
+      <li>Veronica is a PhD student studying a famous detective story set in London.  She works out a walking route that takes the user through all of the locations in the book in an optimal fashion, which is not the same order as the narrative, and wants to publish her annotations about the locations in that sequence. </li>
       </ul>      
-    </section>
-
-    <section>
-      <h2>Third party commentary</h2>
-      <p>
-      A user or publisher other than the one responsible for the target publication(s) has one or more sets of annotations and wishes to make those available to users. These annotations could be comments by the author, other readers, the publisher, or other sources. 
-      </p>
-      <h3>Examples</h3>
-      <ul>
-      <li>Wesley  </li>
-      <li>Xena </li>
-      </ul>
     </section>
 
     <section>
@@ -438,8 +426,8 @@ This use case is particularly challenging to solve in the generic case rather th
       </p>
       <h3>Examples</h3>
       <ul>
-      <li>Yasir </li>
-      <li>Zoe  </li>
+      <li>Wesley writes an annotation about an astronomy publication and wants to save it both in his own system and remotely for others.</li>
+      <li>Xena writes an annotation about Greek mythology which becomes popular and is syndicated widely across many systems after its initial publication online. The syndicated copies refer back to the original source, which Xena uses for credit towards promotion. </li>
       </ul>      
     </section>
     <section>
@@ -449,8 +437,8 @@ This use case is particularly challenging to solve in the generic case rather th
       </p>
       <h3>Examples</h3>
       <ul>
-      <li>Anya </li>
-      <li>Bob  </li>
+      <li>Yasir has two devices that are on the same network.  The devices are set to synchronize his annotations whenever they detect the other one. </li>
+      <li>Zoe has written a lot of annotations on a plane trip while offline.  When she gets home, she manually requests that her device upload all of the annotations to her preferred server.</li>
       </ul>      
     </section>
     <section>
@@ -463,8 +451,8 @@ This use case is particularly challenging to solve in the generic case rather th
       </p>
       <h3>Examples</h3>
       <ul>
-      <li>Catherine  </li>
-      <li>Doug  </li>
+      <li>Anya publishes her annotation on the effects of a particular pharmaceutical product in an authenticated environment in which only her and her colleagues can see it. </li>
+      <li>Bob publishes his annotation openly so that other systems can see the linkage between the resources, but the comment itself is protected by an authentication system and paywall. </li>
       </ul>
     </section>
     <section>
@@ -474,8 +462,8 @@ This use case is particularly challenging to solve in the generic case rather th
       </p>
       <h3>Examples</h3>
       <ul>
-      <li>E</li>
-      <li>F </li>
+      <li>Catherine annotates a closed access journal article that she has access to while at university.  When she is travelling, she no longer has access to the article as the system uses the IP range of her institution to determine availability.</li>
+      <li>Doug works for the closed access journal publisher and is concerned that the annotation Elana made quotes some of the protected text, and if someone were to annotate the entire text, it would break their authorization model.</li>
       </ul>      
     </section>
 
@@ -487,12 +475,12 @@ This use case is particularly challenging to solve in the generic case rather th
     <section>
       <h2>Using Annotation for Contributing Accessibility Information</h2>
       <p>
-      An annotation provider (personal or retailer) wishes to provide annotations that give additional information about resources for the purposes of accessibility. For example, images can be easily described in an annotation which is read aloud by the user agent.
+      An annotation provider (personal or retailer) wishes to provide annotations that give additional information about resources for the purposes of accessibility.
       </p>
       <h3>Examples</h3>
       <ul>
-      <li>G </li>
-      <li>H </li>
+      <li>Elana annotates an image with an audio file that records her description of the image. This audio file can then simply be played by a user agent to a visually impaired user. </li>
+      <li>Frank annotates the text transcription of a segment of video to the appropriate place in the video stream.  The transcription can be displayed to someone unable to hear the audio part of the video, or when the user agent does not have sound capability. </li>
       </ul>       
     </section>
     <section>
@@ -502,8 +490,8 @@ This use case is particularly challenging to solve in the generic case rather th
       </p>
       <h3>Examples</h3>
       <ul>
-      <li>I </li>
-      <li>J </li>
+      <li>Gabby is reading a long work about warfare that is not heavily annotated.  She wishes to skip ahead to the next interesting section, and thus needs to have some way to visualize the location of the annotations that others have made on the work. </li>
+      <li>Hadrien is using a screen reader, and wishes to have the option to listen to the annotations when they are available or to skip past them.  Whenever the system encounters an annotation it gives an audio clue that tapping the screen will prompt the device to pause reading to convey the content of the annotation. </li>
       </ul> 
     </section>
 
