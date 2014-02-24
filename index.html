@@ -7,7 +7,7 @@
 	<script class='remove'>
       var respecConfig = {
           specStatus: "ED", // will be IG-NOTE
-          shortName:  "annotation",
+          shortName:  "annotation-usecases",
           editors: [
                 {   name:       "Robert Sanderson",
                     url:        "",
@@ -39,7 +39,7 @@
 <body>
 <section id='abstract'> 
 <p>
-	This document describes the set of use cases generated for Annotation and Social Reading within the W3C Digital Publishing Interest Group.
+	This document describes the set of use cases generated for Annotation and Social Reading within the W3C Digital Publishing Interest Group, in coordination with the Open Annotation Community Group.
 </p>
 </section>
 <section id='sotd'> 
@@ -65,12 +65,12 @@
     <section>
       <h2>Comment on Publication Title</h2>
       <p>
-      A user wishes to write a comment about a particular publication, such as a single issue of a comic or a single book title. The comment is written in plain text or basic HTML, either on the reading platform (such as a web browser or reading system, henceforth "user agent") or in the retailer's platform. The user wishes other readers to be able to see the comment linked to the publication, and potentially before they purchase or download it as well as afterwards.
+      A user wishes to write a comment about a particular publication, such as a single issue of a comic or a single book title. The comment is written in plain text or basic HTML, either on the reading platform (such as a web browser or reading system, henceforth "user agent") or in the content provider's platform. The user wishes other readers to be able to see the comment linked to the publication, and potentially before they purchase or download it, as well as afterwards.
       </p>
       <h3>Examples</h3>
       <p>
       <ul>
-        <li>Amy is reading Alice in Wonderland online, and using a tool built into the website, comments that she really loves the way the book is written. She then shares this with her friend, Ben.</li> 
+        <li>Amy is reading Alice in Wonderland online and, using a tool built into the provider's website, comments that she really loves the way the book is written. She then shares this with her friend, Ben.</li> 
         <li>Ben is reading a Manga comic on a mobile device.  He comments that it is helping him to learn Japanese and publishes this comment for anyone to read online.</li>
       </ul>
 
@@ -78,7 +78,7 @@
     <section>
       <h2>Tagging a Publication</h2>
       <p>
-      A user wishes to organize their personal digital library by tagging the publications that they have access to. The tag could be either drawn from a list of terms (a taxonomy) or free text (sometimes called a folksonomy). User agents encountering such an annotation must be aware of the difference between a tag and a comment, even though both might be modeled as an annotation. Tags are typically rendered separately and very differently from short textual comments. The user then wishes to view their library partitioned via the tags. The user may wish to share their tags with other users to help the recipient categorize their own library, or find publications of mutual interest.
+      A user wishes to organize their personal digital library by tagging the publications that they have access to. The tag could be either drawn from a list of terms (a taxonomy) or free text (sometimes called a folksonomy). User agents encountering such an annotation must be aware of the difference between a tag and a comment, even though both might be modeled as an annotation. Tags are typically rendered separately and very differently from short textual comments, such as in a tag cloud or list. The user then wishes to view their library partitioned via the tags. The user may wish to share their tags with other users to help the recipient categorize their own library, or find publications of mutual interest.
       </p>
       <h3>Examples</h3>
       <ul>
@@ -90,7 +90,7 @@
     <section>
       <h2>Structured Review of a Publication</h2>
       <p>
-      A user wishes to provide a structured review of a particular publication, including pre-defined fields such as a star rating for quality, cost, entertainment or other domain-specific information. The review could also include a full text description, such as the comment in the first use case. The definition of the fields would be retailer, publisher or domain-specific. In the scholarly domain, this could be expected to provide a distributed and standardized peer-review system, rather than the current use of vendor-specific interfaces. In the commercial sector, it could standardize such features as product reviews.
+      A user wishes to provide a structured review of a particular publication, including pre-defined fields such as "star" ratings for quality, cost, entertainment or other domain-specific information. The review could also include a full text description, such as the comment in the first use case. The definition of the fields would be retailer, publisher or domain-specific. In the scholarly domain, this could be expected to provide a distributed and standardized peer-review system, rather than the current use of vendor-specific interfaces. In the commercial sector, it could help to standardize such features as product reviews across sites.
       </p>
       <h3>Examples</h3>
       <ul>
@@ -100,20 +100,20 @@
 
     </section>    
     <section>
-      <h2>Comment Maintained Separately from Annotation</h2>
+      <h2>Comment Maintained Separately from Annotation Document</h2>
       <p>
       A user wishes to link an existing web resource, such as a blog post or uploaded video, to the particular publication that it is about. The comment could be any online resource, in any format. The user wishes other readers to be able to see the resource linked to the publication, and potentially before they purchase or download it as well as afterwards.
       </p>
       <h3>Examples</h3>
       <ul>
-        <li>Gretchen uses a mobile device to take a video of herself discussing a work that she has just read for a book club.  She posts the video to a commonly used video sharing platform, and then in her reading system annotates the book with the link to the video.  She then shares the annotation with the members of her book club.</li>
-        <li>Harry has written a long blog post about the features of a digitized medieval manuscript.  The manuscript is available via a dedicated website, and he links the blog post to the website's publication via an annotation in his personal note taking system.</li>
+        <li>Gretchen uses a mobile device to take a video of herself discussing a work that she has just read for a book club.  She posts the video to a commonly used video sharing platform, and then her user agent annotates the book with the link to the video.  She then shares the annotation with the members of her book club.</li>
+        <li>Harry has written a long blog post about the features of a digitized medieval manuscript.  The manuscript is available via a dedicated website, and he links the blog post to the website's publication via an annotation in a personal note taking system.</li>
       </ul>
     </section>
     <section>
       <h2>Annotation Metadata</h2>
       <p>
-      A user wishes to contribute their experience in the form of a comment, and wishes to remain known as the author of that content and annotation that links it to the publication.  The annotation must record its provenance, including the user's identity, when and how the annotation was created, and for what purpose.
+      A user wishes to contribute their experience in the form of a comment, and wishes to remain known as the author of that content and annotation that links it to the publication.  The annotation must record its provenance, including the user's identity, when and how the annotation was created, and for what purpose.  This provenance is important for appropriate display of the annotation, filtering or ordering of annotations, maintaining and assigning credit for annotations, determining allowed usage of the annotation, and many other similar requirements.
       </p>
       <p>
       Desirable metadata features:
@@ -143,35 +143,48 @@
 
     </section>
 
+    <section>
+      <h2>Annotation has Multiple, Independent Comments and/or Tags</h2>
+      <p>
+        A user wishes to associate multiple resources at the same time with a publication, where the resources are independent of each other.  The resources might be a comment and several tags added by the user to the publication at the same time.  Alternatively, tags might be extracted from the comment's text by an automatic process and added to the annotation about the publication after the user agent confirms their relevance.  
+      </p>
+      <h3>Examples</h3>
+      <ul>
+        <li>Karen exports her reviews from her user agent, which include both her comments and the tags assigned to the publication when she was doing the review.</li>
+        <li>Luis is reading a romance novel online and comments about the use of a particular character.  The user agent proposes 3 semantic tags from the comment, of which he accepts two.  These tags are added to the annotation along with the comment.</li>
+      </ul>
+
+    </section>
+
   </section>
 
   <section>
-    <h2>Annotations Targeting Specific Segments</h2>
+    <h2>Annotations Targeting Specific Segments of Publications</h2>
 
     <section>
       <h2>Bookmarking Current Reading Position</h2>
       <p>
-      A user wishes to have their reading system record the location they have read up to, either with a manual or automatic bookmark. This bookmark should be positioned at a particular point within the publication, such as a page or even an offset within the character stream. The placement of the bookmark might be automatic (the reading system always moves the bookmark as the user reads) or manual (the user moves the bookmark as they desire). When using the reading system again, the user wishes to optionally start reading from the bookmarked position. 
+      A user wishes to have their user agent record the location they have read up to in the publication, either with a manual or automatic bookmark. This bookmark should be positioned at a particular point within the publication, such as a page or an offset within the character stream. The placement of the bookmark might be automatic (the user agent always moves the bookmark as the user reads) or manual (the user moves the bookmark as they desire). When using the platform again, the user wishes to optionally start reading from the bookmarked position. 
       </p>
       <p> 
       The user also wishes to share this position with others to show how far through the publication they have progressed. This might be publically shared for bragging rights, shared semi-publically such as a reading group or class, or shared privately between platforms that the user has access to in order to maintain the position between devices.
       </p>
       <h3>Examples</h3>
       <ul>
-        <li>Karen is reading a fantasy book as she commutes to work on the train every day.  When she closes her mobile device, the reading system automatically bookmarks where she was reading so she can resume from that position when she gets the train home in the evening.</li>
-        <li>Luis is studying for an exam and creates bookmarks in his textbooks and required reading documents at home.  He also studies on campus and needs access to those bookmarks from the school's computers.  He does not want other students to see his bookmarks, as he is competitive and wants to be the top of the class.</li>
+        <li>Madeleine is reading a fantasy book as she commutes to work on the train every day.  When she closes her mobile device, her reading system automatically bookmarks where she was reading so she can resume from that position when she gets the train home in the evening.</li>
+        <li>Nigel is studying for an exam and creates bookmarks in his textbooks and required reading documents at home.  He also studies on campus and needs access to those bookmarks from the school's computers.  He does not want other students to see his bookmarks, as he is competitive and wants to be the top of the class.</li>
       </ul>
 
     </section>
     <section>
       <h2>Highlighting a Span of Text</h2>
       <p>
-      A user wishes to highlight a span of text in a publication for emphasis. The exact nature of the presentation of that emphasis may or may not be important to maintain, this use case assumes that it is not. The emphasis might be to mark a passage of particular importance, a typo or other mistake, something to cite in another document, to bring to the attention of other readers, or to mark two such selections for comparison. The user may wish to share the highlight, and certainly wishes it to be accessible on multiple platforms to which she has access.
+      A user wishes to highlight a span of text in a publication for emphasis. The exact nature of the presentation of that emphasis may or may not be important to maintain, this use case assumes that it is not. The emphasis might be to mark a passage of particular importance, a typo or other mistake, something to cite in another document, to bring to the attention of other readers, or to mark two such selections for comparison. The user may wish to share the highlight, and certainly wishes it to be accessible on multiple platforms to which she has access.  In this use case there is no requirement to provide a comment or body of the annotation, simply to record a highlighted span of text.
       </p>
       <h3>Examples</h3>
       <ul>
-        <li>Madeleine is preparing to publish a newspaper article and is doing background research.  She highlights various sections of other publications in order to later come back to them and decide if she should include them as quotes in the article or not.</li>
-        <li>Nigel is proofreading his own term paper and highlights areas that he needs to work on.  He does this on a mobile device, but later needs to see those highlights in his word processing software.</li>
+        <li>Olivia is preparing to publish a newspaper article and is doing background research.  She highlights various sections of other publications in order to later come back to them and decide if she should include them as quotes in the article or not.</li>
+        <li>Peter is proofreading his own term paper and highlights areas that he needs to work on.  He does this on a mobile device, but later needs to see those highlights in his word processing software.</li>
       </ul>
 
     </section>
@@ -182,8 +195,8 @@
       </p>
       <h3>Examples</h3>
       <ul>
-        <li>Olivia works for the government and is researching a particular topic.  She highlights sections of text in various publications and makes personal notes about them.  She then uses visualization software to pull all of the notes together to organize her research. </li>
-        <li>Peter reads a news article online that he knows contains misinformation.  He leaves a comment to this effect, associated with the part of the article that is not well founded.</li>  
+        <li>Qitarah works for the government and is researching a particular topic.  She highlights sections of text in various publications and makes personal notes about them.  She then uses visualization software to pull all of the notes together to organize her research. </li>
+        <li>Rangi reads a news article online that he knows contains misinformation.  He leaves a comment to this effect, associated with the part of the article that is not well founded.</li>  
       </ul>
 
     </section>
@@ -194,8 +207,8 @@
       </p>
       <h3>Examples</h3>
       <ul>
-        <li>Qitarah is reading a comic and comments on a particular image that it is much darker than the other cells in the publication.</li>
-        <li>Rangi is reading a white paper that includes an embedded dataset.  He tags the dataset with a semantic URI identifying the subject matter of the dataset, which is different to the paper as a whole.</li>
+        <li>Siobhan is reading a comic and comments on a particular image that it is much darker than the other cells in the publication.</li>
+        <li>Thomas is reading a white paper that includes an embedded dataset.  He tags the dataset with a semantic URI identifying the subject matter of the dataset, which is different to the paper as a whole.</li>
       </ul>
 
     </section>
@@ -207,7 +220,7 @@
       <p>
       The parts of resources to be annotated include:
       <ul>
-        <li>Character position in a text or data stream</li>
+        <li>Character position in an embedded text or data stream</li>
         <li>Time position within an audio or video stream</li>
         <li>x/y points in an area such as an image or video</li>
         <li>x/y/z points in a volume such as a 3d object</li>
@@ -219,10 +232,9 @@
       </p>
       <h3>Examples</h3>
       <ul>
-      <li>Siobhan is teaching a class on physics and annotates part of an embedded video within the electronic textbook, delineating the time range that she wants to use as an example.  She then shares this annotation, and similar, before the class so her students can watch them.</li>
-      <li>Thomas is reading an online magazine about fashion and annotates part of one of the images that depicts a particular style he wishes to replicate in his own work.</li>
+      <li>Umeko is teaching a class on physics and annotates part of an embedded video within the electronic textbook, delineating the time range that she wants to use as an example.  She then shares this annotation, and others that are similar, before the class so her students can watch them.</li>
+      <li>Vladimir is reading an online magazine about fashion and annotates part of one of the images that depicts a particular style he wishes to replicate in his own work.</li>
       </ul>
-
 
     </section>
     <section>
@@ -232,20 +244,20 @@
       </p>
       <h3>Examples</h3>
       <ul>
-      <li>Umeko is concious of accessibility and annotates the depiction of a friend in a photograph, and wants to align that annotation with the name of the person in the textual description of the photograph in her school yearbook.  The text description is provided in the alt text of the image element.</li>
-      <li>Vladimir is annotating a video.  He associates his comments about linguistics with both the time range of the video, but also the accessible text transcription of the speeches.</li>
+      <li>Whitney is concious of accessibility and annotates the depiction of a friend in a photograph, and wants to align that annotation with the name of the person in the textual description of the photograph in her school yearbook.  The text description is provided in the alt text of the image element.</li>
+      <li>Xavier is annotating a video.  He associates his comments about linguistics with both the time range of the video, but also the accessible text transcription of the speeches.</li>
       </ul>
 
     </section>
     <section>
       <h2>Annotation Comparing Segments within a Publication</h2>
         <p>
-        A user wishes to annotate two or more parts of a publication, an embedded resource, or part of an embedded resource, in order to compare or contrast the targets. This may be to point out inconsistencies in the content or rendering, to make a note about two similar or related passages, or to link part of an embedded resource to where it is referenced in the text.
+        A user wishes to annotate two or more parts of a publication, embedded resources, or part of an embedded resource, in order to compare or contrast the targets. This may be to point out inconsistencies in the content or rendering, to make a note about two similar or related passages, or to link part of an embedded resource to where it is referenced in the text.  
         </p>
         <h3>Examples</h3>
         <ul>
-        <li>Whitney is studying a book for an English class and highlights the sections where the author is talking about the age of a character, to demonstrate that the author is inconsistent.  She makes the case in the comment that this is intentional.</li>
-        <li>Xavier highlights areas in charts within a scientific article that demonstrate a particular fact related to his own work.  He comments with a personal note to this effect.</li>
+        <li>Yadira is studying a book for an English class and highlights the sections where the author is talking about the age of a character, to demonstrate that the author is inconsistent.  She makes the case in the comment that this is intentional.</li>
+        <li>Zahir highlights areas in charts within a scientific article that demonstrate a particular fact related to his own work.  He comments with a personal note to this effect.</li>
         </ul>
 
     </section>
@@ -257,8 +269,8 @@
 
       <h3>Examples</h3>
       <ul>
-        <li>Yadira discovers three news articles about the same event which give very different accounts.  She selects the disagreeing numbers given in each, and comments that she believes the lowest of the three and gives her rationale.</li>
-        <li>Zahir is linking the transcriptions of song lyrics, published in various anthologies, together based on obscure references to particular real world people. She tags the segements with the person's identity in Wikipedia. </li>
+        <li>Ahmed discovers three news articles about the same event which give very different accounts.  He selects the disagreeing numbers given in each, and comments that he believes the lowest of the three and gives his rationale.</li>
+        <li>Bianca is linking the transcriptions of song lyrics, published in various anthologies, together based on obscure references to particular real world people. She tags the segments with the person's identity in Wikipedia. </li>
       </ul>
     </section>
   </section>
@@ -273,35 +285,38 @@
       </p>
       <h3>Examples</h3>
       <ul>
-      <li>Ahmed </li>
-      <li>Bianca </li> 
+      <li>Craig is reading a book on motorsports that is published both online and reproduced as a PDF.  He publishes an annotation about a span of text in the HTML version, and expects that it will appear in his tablet based reading platform after synchronization, where the same article is a PDF.</li>
+      <li>Dee reviews a scholarly article in a dedicated client on her computer, where the article is a print-ready PDF.  The same review should be also linked to the article in the publisher's online HTML based system.</li> 
       </ul>
 
     </section>
     <section>
       <h2>Cross Version Annotations</h2>
       <p>
-        A user wishes to annotate part of a publication for which she has multiple editions, or that is updated regularly, and have those annotations persist between versions of the same publication. For example, annotating the first line of Hamlet should appear on all of the copies of the play that the user has access to. If the publisher provides a typo-fix, known to happen silently at times, then the annotations should be available on this new version of the publication rather than equally silently disappearing. Thirdly, a teacher annotating a text book should be able to share his annotations with his students even though they do not have the teacher's copy of the text book, but instead have acquired it from different retailers.
+        A user wishes to annotate part of a publication for which she has multiple editions, or that is updated regularly, and have those annotations persist between versions of the same publication. If the publisher provides a new version of a publication, known to happen silently at times for various reasons, then the annotations about the publication should be available on this new version rather than equally silently disappearing.  As with any annotation that should be presented with more than just the resource it was created for, cross versioning allows for a wider audience and thus is a potential target for spammers.
       </p>
       <h3>Examples</h3>
       <ul>
-        <li>Craig </li>
-        <li>Dee </li> 
+        <li>Enrique wishes to annotate the first line of Hamlet in such a way that it should appear on all of the copies of the play that the user has access to, rather than just the particular version that was open when the annotation was created.  </li>
+        <li>Faith is a teacher who wishes to annotate a text book in such as way that her annotations are visible to her students even though they do not have the exact same version, but instead have acquired it from different retailers.</li> 
       </ul>
+
+<h3>Note</h3>
+<p>
+This use case is particularly challenging to solve in environments in which identifiers for the work, rather than the particular version, do not exist.
+</p>
 
 
     </section>    
     <section>
       <h2>Maintaining Annotation Style</h2>
       <p>
-      A user wishes to associate a particular style with an annotation, either for the comment or the delineation of the target of the annotation. For example, a user draws a bounding box on an image of the night sky, and wishes to ensure that her client in the future will draw the box in bright green to stand out, and certainly not to draw it in the default black which would be unable to be seen. An academic is highlighting parts of a text in two colors that have meaning to him; red strikethrough is statements that he disagrees with, and green background is for statements that he does agree with. These styles must be maintained for the highlights to be of use in the future. Thirdly, the user should be able to associate style with the comment or body of the annotation, such that the text or resource is rendered in a particular way. Important (to the user) comments might have a bold-face style associated with them, whereas notes may be in italic.
-
-      When colors or styles associated with annotations are meaningful to an individual, to a particular group, or generally, a text label should be associated with the annotation drawn from a list of terms (taxonomy) or free text
+      A user wishes to associate a particular style with an annotation, either for the comment or the delineation of the target of the annotation. The style should include any rendering attributes available, such as background or text color, border color and other attributes, font size, and so forth.  When colors or styles associated with annotations are meaningful to an individual, to a particular group, or just generally, a text label should be able to be associated with the annotation drawn from a list of terms (taxonomy) or free text, in order to assist with accessbility.
       </p>
       <h3>Examples</h3>
       <ul>
-      <li>Enrique  </li>
-      <li>Faith  </li>
+      <li>Gerard draws a bounding box on an image of the night sky, and wishes to ensure that his client in the future will draw the box in bright green to stand out, and certainly not to draw it in the default black which would be unable to be seen. </li>
+      <li>Hailee highlights parts of a non-fiction text in two colors that have meaning to her; red strikethrough is statements that she disagrees with, and green background is for statements that she does agree with. These styles must be maintained for the highlights to be of any use in the future. </li>
       </ul>
 
     </section>
@@ -312,10 +327,9 @@
       </p>
       <h3>Examples</h3>
       <ul>
-      <li>Gerard </li>
-      <li>Hailee </li>
+      <li>Ichiro is reading a fixed-layout work and positions his annotations above whitespace in the text with arrows to the character span that they refer to. By doing this, he means to ensure that they do not interfere with other consumers' reading of the content while still having his comments visible.</li>
+      <li>Jacinta is a publisher and lays out the author's annotations on a novel in such a way that they aid the reader in understanding how the author was thinking about his characters.  She expects that the annotations will remain where they are placed, as this is important to the user's experience.</li>
       </ul>
-
 
     </section>
     <section>
@@ -325,42 +339,68 @@
       </p>
       <h3>Examples</h3>
       <ul>
-        <li>Ichiro </li>
-        <li>Jacinta </li>
+        <li>Ken annotates an online travel publication that is frequently updated with the latest information, such as the prices of hotel rooms and the quality of restaurants in the area.  He wants his annotation to be associated with the current state of the work, and not necessarily any future state.</li>
+        <li>Lynda is reading a book that dynamically embeds images via a service.  The JPG format that is used by a particular publication is rendered with too high a compression level, and it is hard to understand compared to the original PNG format.  She thus wishes to comment only on the JPG that it is hard to see, rather than on the PNG which shares the same negotiable URI.</li>
       </ul>
 
     </section> 
     <section>
       <h2>Recording State of User Manipulated Resources</h2>
       <p>
-      A user wishes to annotate a publication with embedded, dynamic resources. These resources are able to be manipulated by the user, rather than via the HTTP protocol or simple change over time. For example, a publication may embed a 3 dimensional model of a protein structure that can be rotated, panned and zoomed. Some number of manipulations must be performed in order for the target of the annotation to be visible or understandable, regardless of the accuracy of the target region in the model. The consuming user agent should then be able to reproduce these manipulations in order to allow a third party to see the model as annotated.
+      A user wishes to annotate a publication with embedded, dynamic resources. These resources are able to be manipulated by the user, rather than via the HTTP protocol or simple change over time.  Some number of manipulations must be performed in order for the target of the annotation to be visible or understandable, regardless of the accuracy of the description of the target segment. The consuming user agent should then be able to reproduce these manipulations in order to allow a third party to see the resource as annotated.
       </p>
-    </section>
-    <section>
-      <h2>Annotation has Multiple, Independent Bodies</h2>
-      <p>
-        A user wishes to associate multiple resources at the same time with a single target, where the resources are independent of each other. For example, a user exports their browser bookmarks which contain a short note and several tags. Alternatively, tags may be extracted from the comment's text by an automatic process and added to the annotation.
-      </p>
+      <h3>Examples</h3>
+      <ul>
+      <li>Maurice is studying a publication that embeds a 3 dimensional model of a protein structure that can be rotated, panned and zoomed.  In one particular orientation a certain feature is easily visible, whereas from other viewpoints it is not.  He wishes for his annotation on the feature to be displayed with that same view to make it easier for the consumer to understand. </li>
+      <li>Nadia highlights some text in a page that is responsive to user interactions and preferences.  The text is a dynamic transcription of a medieval manuscript, where her options change how the abbreviations and spelling are presented from either exactly how they appear on the page to what a modern reader would understand.  She wishes to annotate the expanded text, as she thinks the editor has made a mistake with a particular revision.</li>
+      </ul>
+
+<h3>Note</h3>
+<p>
+This use case is particularly challenging to solve in the generic case rather than with media specific solutions.
+</p>
 
     </section>
+
     <section>
-      <h2>Annotation has a Choice of Multiple, Dependent Bodies</h2>
+      <h2>Annotation has a Choice of Multiple, Dependent Bodies or Targets</h2>
       <p>
-      A user wishes to annotate a publication or part thereof with multiple options for the body. The options are thus dependent on each other, and only one of the options should be displayed to the user. Examples are: translations of comments, where the user agent could display the French translation of a Spanish comment; alternative formats for the same content, such as HTML with a fallback to plain text; and alternative URLs for the same content, where the content is accessible from each of the URLs.
+      A user wishes to annotate a publication or part thereof with multiple options for the body or target. The options are thus dependent on each other, and only one of the options should be displayed to the user. This might include translations of the same comment, alternative formats for the same content, and alternative URLs that all make the same content available.
       </p>
+      <h3>Examples</h3>
+      <ul>
+      <li>Owen speaks both Japanese and English, and wishes to provide translations of his comment in both languages.  He teaches English as a foreign language in Japan, and his students should be able to choose whether to view it in one language or the other.</li>
+      <li>Petra annotates a paper that is published in multiple locations, however the representations are identical.  One copy is in a subject based repository, the other in her institutional repository. She wishes to explicitly link both of the targets to ensure her annotation can be presented along with at least one copy of the paper from the most convenient location to the consumer.</li>
+      </ul>
     </section>
     <section>
       <h2>Determination of Annotation Validity after Target is Modified</h2>
       <p>
         A user annotates a publication with a correction to the text. The publisher then acts upon this annotation to correct the mistake, or in the scholarly field potentially to retract the publication from the scientific record. After the correction has been made, the annotation no longer applies to the publication and hence should not be displayed. It may be important not to delete the annotation, such that the user gets credit in some system for reporting the correction. The system that maintains the annotation may not be connected to the system that publishes the publication, and hence might not be able to be updated.
       </p>
+      <h3>Examples</h3>
+      <ul>
+      <li>Quinn annotates a gaming manual with a correction as to which controls are needed to perform a particular move.  The publisher re-issues a new copy of the manual after the correction has been made to avoid other users having the same frustration.  Quinn's annotation should not appear on the new version. </li>
+      <li>Romana annotates a typo in how her name is spelt (two 'n's instead of one) in a book about the research in her field.  Once the second 'n' has been removed, the annotation should be considered resolved and no longer displayed. </li>
+      </ul>      
+<h3>Note</h3>
+<p>
+This use case is particularly challenging to solve in the generic case rather than within specific systems that understand the motivation of the annotation and when it has been resolved.
+</p>
+
     </section>    
     <section>
       <h2>Determination of Annotation Validity for Embedded Resources</h2>
       <p>
-        A user annotates an embedded resource, such as an image, which is used in several places within a publication.  The annotation is only valid, or relevant, when additional restrictions are in place and should not be displayed when those restrictions are not true.  For example, the same headshot photograph is used for two different people and the user wants to annotate the photograph to say that it is wrong when used on page 1, but not have the annotation displayed when it is used correctly on page 3.  Alternatively, the user might wish to comment that a company logo should only be used in the header on every page, but nowhere else.
+        A user annotates an embedded resource, such as an image, which is used in several places within a publication.  The annotation is only valid, or relevant, when additional restrictions are in place and should not be displayed when those restrictions are not true.
       </p>
+      <h3>Examples</h3>
+      <ul>
+      <li>Solomon reads a publication in which the same headshot photograph is used for two different people and wants to annotate the photograph to say that it is wrong when used on page 1, but not have the annotation displayed when the photograph is used correctly on page 3.</li>
+      <li>Teynika wishes to comment that a company logo should only be used in the header on every page, but nowhere else.</li>
+      </ul>
     </section> 
+
 
   </section>
 
@@ -372,6 +412,11 @@
       <p>
       A publisher has one or more sets of annotations about a publication and wishes to supply those annotations along with the publication. These annotations could be comments by the author (in the same vein as DVD extras commentary), from famous readers, or simply pointers to related works. In an education setting, this functionality could be used to provide additional commentaries on a text book or other publication that are intended to assist the student in understanding the material. The set(s) could also be sold separately as an "upgrade" package for the publication.  The order of the annotations may be important, for example to read the publication in chronological rather than narrative order, or by following the order of a class lectures rather than the order of the chapters in the text book.  The metadata about the collection of annotations is also important, such as who packaged them together and for what purpose.
       </p>
+      <h3>Examples</h3>
+      <ul>
+      <li>Ulrich  </li>
+      <li>Veronica  </li>
+      </ul>      
     </section>
 
     <section>
@@ -379,7 +424,11 @@
       <p>
       A user or publisher other than the one responsible for the target publication(s) has one or more sets of annotations and wishes to make those available to users. These annotations could be comments by the author, other readers, the publisher, or other sources. 
       </p>
-
+      <h3>Examples</h3>
+      <ul>
+      <li>Wesley  </li>
+      <li>Xena </li>
+      </ul>
     </section>
 
     <section>
@@ -387,12 +436,22 @@
       <p>
       A user wishes to save the annotation that they have created in order to retrieve it later, regardless of whether it is finished or not. The Annotation should be given a unique and resolvable identifier. The user may wish to save the annotation in their own system, rather than the system which provides the resource being annotated. The user may equally wish to save the annotation in multiple systems. The annotation should persist in local storage if the user is offline, and be persisted globally once the connection is re-established. In the interim, a locally unique identifier should be assigned to the annotation. Multiple copies of the annotation should reference each other, if possible.
       </p>
+      <h3>Examples</h3>
+      <ul>
+      <li>Yasir </li>
+      <li>Zoe  </li>
+      </ul>      
     </section>
     <section>
       <h2>User or System Initiated Transfers between Systems</h2>
       <p>
         Either the user or the system requests that all or some subset of annotations that are maintained be transferred to another system. If the user requests it, then it this enables an export functionality such that the user's annotations can be exported to another platform or device. If the system requests it, then this enables a synchronization functionality where the user's annotations will be maintained in multiple locations for ease of use and preservation, or aggregation for analysis. Both such cases should use the same mechanism.
       </p>
+      <h3>Examples</h3>
+      <ul>
+      <li>Anya </li>
+      <li>Bob  </li>
+      </ul>      
     </section>
     <section>
       <h2>Annotation (or Part) is not Published Openly</h2>
@@ -402,13 +461,22 @@
       <p>
       The user may also wish to keep only some aspect of the annotation private, for example the comment should be protected, while the annotation graph can be shared openly, or vice versa. Regular web based authentication and authorization structures should be used to enable this functionality in an online environment to ensure interoperability.
       </p>
-
+      <h3>Examples</h3>
+      <ul>
+      <li>Catherine  </li>
+      <li>Doug  </li>
+      </ul>
     </section>
     <section>
       <h2>Publication (or Part) is not Published Openly</h2>
       <p>
       A user wishes to annotate a resource the she has access to, but requires authentication and/or authorization to view or annotate. The annotation should not circumvent or allow the circumvention of this DRM, for example by reproducing the content of the target publication.
       </p>
+      <h3>Examples</h3>
+      <ul>
+      <li>E</li>
+      <li>F </li>
+      </ul>      
     </section>
 
   </section>
@@ -421,12 +489,22 @@
       <p>
       An annotation provider (personal or retailer) wishes to provide annotations that give additional information about resources for the purposes of accessibility. For example, images can be easily described in an annotation which is read aloud by the user agent.
       </p>
+      <h3>Examples</h3>
+      <ul>
+      <li>G </li>
+      <li>H </li>
+      </ul>       
     </section>
     <section>
       <h2>Location of Annotations</h2>
       <p>
       Users need to easily become aware of and find highlights or annotations, particularly when using a screen reader, a small screen, or seeking sparse annotations in a lengthy work.
       </p>
+      <h3>Examples</h3>
+      <ul>
+      <li>I </li>
+      <li>J </li>
+      </ul> 
     </section>
 
 
@@ -435,10 +513,6 @@
 
 </section>
 
-<!-- 
-  Missing features from Open Annotation:
-  * hasScope  // not sorry to see this go
--->
 
 
 <section>
