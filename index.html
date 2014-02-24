@@ -52,12 +52,19 @@
 <section class="informative">
 <h2>Introduction</h2>
 <p>
+Annotation is a pervasive activity when reading or otherwise engaging with publications.  In the physical world, highlighting and sticky notes are common paradigms for marking up and associating one's own content with the work being read, and many digital solutions exist in the same space.  These digital solutions are, however, not interoperable between systems, even when there is only one user with multiple devices.  
 </p>
+<p>
+This document lays out the use cases for annotations on digital publications, as envisioned by the W3C Digital Publishing Interest Group, the W3C Open Annotation Community Group and the International Digital Publishing Forum.  The use cases are provided as a means to drive forwards the conversation about standards in this arena.
+
 </section>
 
 <section>
   <h2>Use Cases</h2>
 
+<p>
+The use cases are divided into five sections: annotations that target only the entire publication, annotations that target a particular part of a publication, more complex annotations, the publication of annotations and finally use cases that are directly related to accessibility. 
+</p>
 
   <section>
     <h2>Annotations Targeting the Full Publication</h2>
@@ -467,6 +474,11 @@ This use case is particularly challenging to solve in the generic case rather th
       </ul>      
     </section>
 
+    <section>
+      <h2>Usage</h2>
+
+    </section>
+
   </section>
 
   <section>
@@ -495,8 +507,6 @@ This use case is particularly challenging to solve in the generic case rather th
       </ul> 
     </section>
 
-
-
   </section>
 
 </section>
@@ -505,6 +515,8 @@ This use case is particularly challenging to solve in the generic case rather th
 
 <section>
 <h2>Requirements</h2>
+
+<p>The following requirements are summarized from the use cases presented above.</p>
 
   <section>
   <h2>Annotation Model</h2>
@@ -517,7 +529,7 @@ This use case is particularly challenging to solve in the generic case rather th
     <li>Multiple Formats for Comment, including Structured Data</li>
     <li>Distinction between Tag and Comment, or other types of Body Resource</li>
     <li>Annotations without a Body Resource (Bookmark, Highlight)</li>
-    <li>Metadata about the Annotation's Provenance</li>
+    <li>Metadata about the Annotation</li>
 
     <li>Ability to target a point within a Publication</li>
     <li>Ability to target a range of characters within a Publication's text</li>
@@ -533,6 +545,8 @@ This use case is particularly challenging to solve in the generic case rather th
     <li>Ability to associate style information with bodies and targets</li>
     <li>Ability to associate timestamps with bodies and targets to determine the appropriate representation</li>
     <li>Ability to associate HTTP request information with bodies and targets to determine the appropriate representation</li>
+    <li>Ability to have robust annotations that reference the same work in different media types</li>
+    <li>Ability to determine the validity of annotations in a dynamic environment</li>
 
     <li>Collection of annotations, where the annotations in the collection are ordered</li>
     <li>Metadata about the Collection of Annotations</li>
@@ -545,8 +559,9 @@ This use case is particularly challenging to solve in the generic case rather th
   <ul>
     <li>Discovery of Annotations Relevant to Publication</li>
     <li>Persistence of Annotations</li>
-    <li>Service for Sharing Annotations</li>
-    <li>Management of Annotations</li>
+    <li>Service for Sharing Annotations, either with others or between platforms</li>
+    <li>Management of Shared Annotations</li>
+    <li>Authentication and Authorization in the Annotation ecosystem</li>
   </ul>
   </section>
 </section>
@@ -556,14 +571,15 @@ This use case is particularly challenging to solve in the generic case rather th
 <h2>Related Specifications</h2>
 
 <ul>
-<li>Open Annotation</li>
-<li>HTML5</li>
-<li>JSON-LD</li>
-<li>RDF</li>
-<li>SKOS</li>
-<li>Media Fragments</li>
-<li>CSS</li>
-<li>Prov</li>
+<li><a href="http://www.openannotation.org/spec/core/">Open Annotation</a></li>
+<li><a href="http://www.w3.org/TR/html5/">HTML5</a></li>
+<li><a href="http://www.w3.org/TR/json-ld/">JSON-LD</a></li>
+<li><a href="http://www.w3.org/TR/rdf-primer/">RDF</a></li>
+<li><a href="http://www.w3.org/TR/skos-reference/">SKOS</a></li>
+<li><a href="http://www.w3.org/TR/media-frags/">Media Fragments</a></li>
+<li><a href="http://www.w3.org/TR/CSS2/">CSS</a></li>
+<li><a href="http://www.w3.org/TR/prov-o/">PROV Ontology</a></li>
+</ul>
 
 </section>
 
