@@ -7,7 +7,7 @@
 	<script class='remove'>
       var respecConfig = {
           specStatus: "ED", // will be IG-NOTE
-          shortName:  "annotation-usecases",
+          shortName:  "dpub-annotation-uc",
           editors: [
                 {   name:       "Robert Sanderson",
                     url:        "",
@@ -380,6 +380,21 @@ This use case is particularly challenging to solve in the generic case rather th
       <li>Petra annotates a paper that is published in multiple locations, however the representations are identical.  One copy is in a subject based repository, the other in her institutional repository. She wishes to explicitly link both of the targets to ensure her annotation can be presented along with at least one copy of the paper from the most convenient location to the consumer.</li>
       </ul>
     </section>
+
+    <section>
+     <h2>Annotation has Multiple, Dynamically Defined Targets</h2>
+     <p>A user wishes to target segments of a resource that appear more than once in that resource, termed here a "repeated segment". The user does not necessarily know the exact number of times the repeated segment appears in the resource; the interpretation of the annotation is understood to be independent of the number of instances of the repeated segment.</p>
+     <h3>Examples</h3>
+     <ul>
+     <li>Quinn, a copy editor, creates an annotation proposing a correction to replace all instances of the string "pleaf'd" with the string "pleas'd". Essentially the annotation is proposing a search and replace operation of the sort ubiquitous in modern word processing systems.</li>
+     <li>Romana, a manufacturer, wishes to annotate all products of a certain class in his products database with a note that these items will go on sale next week for 15% off for 2 weeks only. </li>
+     </ul>
+
+     <h3>Note</h3>
+     There are usability implications with annotating dynamically defined segments, rather than specific enumerated segments.  This could be used as an attack vector for spam or exploitation of user agent bugs by annoting common words on frequently visited URIs. For example, annotating "a" on the top million sites with an advertisement in the annotation's body.
+    </section> 
+
+
     <section>
       <h2>Determination of Annotation Validity after Target is Modified</h2>
       <p>
@@ -387,8 +402,8 @@ This use case is particularly challenging to solve in the generic case rather th
       </p>
       <h3>Examples</h3>
       <ul>
-      <li>Quinn annotates a gaming manual with a correction as to which controls are needed to perform a particular move.  The publisher re-issues a new copy of the manual after the correction has been made to avoid other users having the same frustration.  Quinn's annotation should not appear on the new version. </li>
-      <li>Romana annotates a typo in how her name is spelt (two 'n's instead of one) in a book about the research in her field.  Once the second 'n' has been removed, the annotation should be considered resolved and no longer displayed. </li>
+      <li>Solomon annotates a gaming manual with a correction as to which controls are needed to perform a particular move.  The publisher re-issues a new copy of the manual after the correction has been made to avoid other users having the same frustration.  Quinn's annotation should not appear on the new version. </li>
+      <li>Teynika annotates a typo in how her name is spelt (two 'n's instead of one) in a book about the research in her field.  Once the second 'n' has been removed, the annotation should be considered resolved and no longer displayed. </li>
       </ul>      
 <h3>Note</h3>
 <p>
@@ -403,8 +418,8 @@ This use case is particularly challenging to solve in the generic case rather th
       </p>
       <h3>Examples</h3>
       <ul>
-      <li>Solomon reads a publication in which the same headshot photograph is used for two different people and wants to annotate the photograph to say that it is wrong when used on page 1, but not have the annotation displayed when the photograph is used correctly on page 3.</li>
-      <li>Teynika wishes to comment that a company logo should only be used in the header on every page, but nowhere else.</li>
+      <li>Ulrich reads a publication in which the same headshot photograph is used for two different people and wants to annotate the photograph to say that it is wrong when used on page 1, but not have the annotation displayed when the photograph is used correctly on page 3.</li>
+      <li>Veronica wishes to comment that a company logo should only be used in the header on every page, but nowhere else.</li>
       </ul>
     </section> 
 
@@ -421,8 +436,8 @@ This use case is particularly challenging to solve in the generic case rather th
       </p>
       <h3>Examples</h3>
       <ul>
-      <li>Ulrich works for a publishing house and has transformed the author's commentary on their steampunk novel into a set of annotations for sale.  The company wishes to have them available as an add-on for customers that have already bought the novel, and also in a bundle for new sales. </li>
-      <li>Veronica is a PhD student studying a famous detective story set in London.  She works out a walking route that takes the user through all of the locations in the book in an optimal fashion, which is not the same order as the narrative, and wants to publish her annotations about the locations in that sequence. </li>
+      <li>Wesley works for a publishing house and has transformed the author's commentary on their steampunk novel into a set of annotations for sale.  The company wishes to have them available as an add-on for customers that have already bought the novel, and also in a bundle for new sales. </li>
+      <li>Xena is a PhD student studying a famous detective story set in London.  She works out a walking route that takes the user through all of the locations in the book in an optimal fashion, which is not the same order as the narrative, and wants to publish her annotations about the locations in that sequence. </li>
       </ul>      
     </section>
 
@@ -433,8 +448,8 @@ This use case is particularly challenging to solve in the generic case rather th
       </p>
       <h3>Examples</h3>
       <ul>
-      <li>Wesley writes an annotation about an astronomy publication and wants to save it both in his own system and remotely for others.</li>
-      <li>Xena writes an annotation about Greek mythology which becomes popular and is syndicated widely across many systems after its initial publication online. The syndicated copies refer back to the original source, which Xena uses for credit towards promotion. </li>
+      <li>Yasir writes an annotation about an astronomy publication and wants to save it both in his own system and remotely for others.</li>
+      <li>Zoe writes an annotation about Greek mythology which becomes popular and is syndicated widely across many systems after its initial publication online. The syndicated copies refer back to the original source, which Xena uses for credit towards promotion. </li>
       </ul>      
     </section>
     <section>
@@ -444,8 +459,8 @@ This use case is particularly challenging to solve in the generic case rather th
       </p>
       <h3>Examples</h3>
       <ul>
-      <li>Yasir has two devices that are on the same network.  The devices are set to synchronize his annotations whenever they detect the other one. </li>
-      <li>Zoe has written a lot of annotations on a plane trip while offline.  When she gets home, she manually requests that her device upload all of the annotations to her preferred server.</li>
+      <li>Anya has two devices that are on the same network.  The devices are set to synchronize his annotations whenever they detect each other. </li>
+      <li>Bob has written a lot of annotations on a plane trip while offline.  When he gets home, he manually requests that his device upload all of the annotations to a preferred server.</li>
       </ul>      
     </section>
     <section>
@@ -458,8 +473,8 @@ This use case is particularly challenging to solve in the generic case rather th
       </p>
       <h3>Examples</h3>
       <ul>
-      <li>Anya publishes her annotation on the effects of a particular pharmaceutical product in an authenticated environment in which only her and her colleagues can see it. </li>
-      <li>Bob publishes his annotation openly so that other systems can see the linkage between the resources, but the comment itself is protected by an authentication system and paywall. </li>
+      <li>Catherine publishes her annotation on the effects of a particular pharmaceutical product in an authenticated environment in which only her and her colleagues can see it. </li>
+      <li>Doug publishes his annotation openly so that other systems can see the linkage between the resources, but the comment itself is protected by an authentication system and paywall. </li>
       </ul>
     </section>
     <section>
@@ -469,20 +484,15 @@ This use case is particularly challenging to solve in the generic case rather th
       </p>
       <h3>Examples</h3>
       <ul>
-      <li>Catherine annotates a closed access journal article that she has access to while at university.  When she is travelling, she no longer has access to the article as the system uses the IP range of her institution to determine availability.</li>
-      <li>Doug works for the closed access journal publisher and is concerned that the annotation Elana made quotes some of the protected text, and if someone were to annotate the entire text, it would break their authorization model.</li>
+      <li>Elana annotates a closed access journal article that she has access to while at university.  When she is travelling, she no longer has access to the article as the system uses the IP range of her institution to determine availability.</li>
+      <li>Frank works for the closed access journal publisher and is concerned that the annotation Elana made quotes some of the protected text, and if someone were to annotate the entire text, it would break their authorization model.</li>
       </ul>      
-    </section>
-
-    <section>
-      <h2>Usage</h2>
-
     </section>
 
   </section>
 
   <section>
-    <h2>Accessibility Use Cases</h2>
+    <h2>Accessibility and Internationalization</h2>
 
     <section>
       <h2>Using Annotation for Contributing Accessibility Information</h2>
@@ -491,8 +501,8 @@ This use case is particularly challenging to solve in the generic case rather th
       </p>
       <h3>Examples</h3>
       <ul>
-      <li>Elana annotates an image with an audio file that records her description of the image. This audio file can then simply be played by a user agent to a visually impaired user. </li>
-      <li>Frank annotates the text transcription of a segment of video to the appropriate place in the video stream.  The transcription can be displayed to someone unable to hear the audio part of the video, or when the user agent does not have sound capability. </li>
+      <li>Gabby annotates an image with an audio file that records her description of the image. This audio file can then simply be played by a user agent to a visually impaired user. </li>
+      <li>Hadrien annotates the text transcription of a segment of video to the appropriate place in the video stream.  The transcription can be displayed to someone unable to hear the audio part of the video, or when the user agent does not have sound capability. </li>
       </ul>       
     </section>
     <section>
@@ -502,12 +512,22 @@ This use case is particularly challenging to solve in the generic case rather th
       </p>
       <h3>Examples</h3>
       <ul>
-      <li>Gabby is reading a long work about warfare that is not heavily annotated.  She wishes to skip ahead to the next interesting section, and thus needs to have some way to visualize the location of the annotations that others have made on the work. </li>
-      <li>Hadrien is using a screen reader, and wishes to have the option to listen to the annotations when they are available or to skip past them.  Whenever the system encounters an annotation it gives an audio clue that tapping the screen will prompt the device to pause reading to convey the content of the annotation. </li>
+      <li>Isabelle is reading a long work about warfare that is not heavily annotated.  She wishes to skip ahead to the next interesting section, and thus needs to have some way to visualize the location of the annotations that others have made on the work. </li>
+      <li>Jason is using a screen reader, and wishes to have the option to listen to the annotations when they are available or to skip past them.  Whenever the system encounters an annotation it gives an audio clue that tapping the screen will prompt the device to pause reading to convey the content of the annotation. </li>
       </ul> 
     </section>
 
-  </section>
+    <section>
+      <h2>Using Annotation for Contributing Internationalization Information</h2>
+      <p>
+      A user wishes to provide internationalization information for a document that they don't conrol, such as a translation for a particularly complex phrase, or whether automated translation systems should explicitly not translate a given phrase.  
+      </p>
+      <h3>Examples</h3>
+      <ul>
+      <li>Katelynn has implemented a machine translation system that generates reliable Dutch translations and has it scheduled to run on commonly updated English-language sites, before publishing to a well-known annotation server in the Netherlands.</li>
+      <li>Luke is a scholar in Ancient Greek, and routinely provides translations for online texts when they have been transcribed from museum objects.  He wishes to make his translations available to both the museums and anyone who visits their online exhibitions.</li>
+      </ul>
+    </section>
 
 </section>
 
@@ -579,16 +599,10 @@ This use case is particularly challenging to solve in the generic case rather th
 <li><a href="http://www.w3.org/TR/media-frags/">Media Fragments</a></li>
 <li><a href="http://www.w3.org/TR/CSS2/">CSS</a></li>
 <li><a href="http://www.w3.org/TR/prov-o/">PROV Ontology</a></li>
+<li><a href="http://www.w3.org/TR/its20/">Internationalization Tag Set</a></li>
 </ul>
 
 </section>
-
-
-<section>
-<h2>Conclusion</h2>
-
-</section>
-
 
 
 </body>
